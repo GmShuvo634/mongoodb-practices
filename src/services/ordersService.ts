@@ -20,4 +20,12 @@ export class OrdersService {
   async getTotalRevenueByCategory(category: string): Promise<any> {
     return this.ordersRepository.getTotalRevenueByCategory(category);
   }
+
+  async orderedByEachCustomer(): Promise<any> {
+    return this.ordersRepository.orderedByEachCustomer();
+  }
+
+  async ordersWithCustomer(): Promise<any> {
+    return this.ordersRepository.ordersWithCustomer();
+  }
 }

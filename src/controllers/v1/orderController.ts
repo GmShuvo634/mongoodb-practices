@@ -42,3 +42,21 @@ export const getTotalRevenueByCategory = async (req: Request, res: Response) => 
     res.status(500).json({ error: "Failed to fetch total revenue" });
   }
 };
+
+export const orderedByEachCustomer = async (_req: Request, res: Response) => {
+  try {
+    const order = await ordersService.orderedByEachCustomer();
+    res.status(200).json(order);
+  } catch (error) {
+    res.status(500).json({ error: "Failed to fetch order" });
+  }
+}
+
+export const ordersWithCustomer = async (_req: Request, res: Response) => {
+  try {
+    const order = await ordersService.ordersWithCustomer();
+    res.status(200).json(order);
+  } catch (error) {
+    res.status(500).json({ error: "Failed to fetch order" });
+  }
+}
