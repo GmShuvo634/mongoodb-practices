@@ -6,7 +6,7 @@ router.get("/", getAllOrders);
 router.post("/", createOrder);
 router.get("/orders-by-customer", orderedByEachCustomer);
 router.get("/orders-with-customer", ordersWithCustomer);
-router.get("/:id", getOrderById);
+// router.get("/:id", getOrderById);
 router.get("/total-revenue/:category", getTotalRevenueByCategory);
 
 export default router;
