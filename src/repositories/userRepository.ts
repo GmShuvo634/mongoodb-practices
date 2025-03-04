@@ -20,4 +20,19 @@ export class UserRepository {
     async getUserById(id: string): Promise<IUser | null> {
         return await User.findById(id);
     }
+
+    async updateBalance(
+        id: string,
+        amount: number,
+        session: mongoose.ClientSession
+
+    ): Promise<IUser | null> {
+        return await User.findOneAndUpdate(
+            { _id: id },
+            { $inc: { balance: amount } },
+            { new: true, session }
+        );
+    }
+
 }
+

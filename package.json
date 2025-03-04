@@ -4,7 +4,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "nodemon --ext ts --exec ts-node src/server.ts",
-    "seed": "ts-node src/seeders/orderSeeder.ts"
+    "seed": "ts-node src/seeders/userSeeder.ts"
   },
   "keywords": [],
   "author": "",

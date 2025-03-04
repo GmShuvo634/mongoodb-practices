@@ -14,16 +14,19 @@ const seedUsers = async () => {
       name: "John Doe",
       email: "john@example.com",
       password: "password123",
+      balance: 3000,
     },
     {
       name: "Jane Smith",
       email: "jane@example.com",
       password: "password456",
+      balance: 7000,
     },
     {
       name: "Sam Green",
       email: "sam@example.com",
       password: "password789",
+      balance: 4000,
     },
   ];
 

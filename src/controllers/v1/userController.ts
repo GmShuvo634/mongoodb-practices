@@ -20,3 +20,13 @@ export const getAllUsers = async (_req: Request, res: Response) => {
     res.status(500).json({ error: "Failed to fetch users" });
   }
 };
+
+export const transferAmount = async (req: Request, res: Response) => {
+  try {
+    const { senderId, receiverId, amount } = req.body;
+    const response = await userService.updateBalance(senderId, receiverId, amount);
+    res.status(200).json(response);
+  } catch (error) {
+    res.status(500).json({ error: "Failed to transfer amount" });
+  }
+}
